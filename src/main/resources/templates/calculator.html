@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+
+<h2>Calculator</h2>
+
+<form method="post" action="/calculate">
+    <input type="number" step="any" name="a" required>
+    <input type="number" step="any" name="b" required>
+    <button type="submit">Add</button>
+</form>
+
+<p th:if="${result != null}">
+    Result: <span th:text="${result}"></span>
+</p>
+
+</body>
+</html>
